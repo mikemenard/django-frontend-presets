@@ -17,7 +17,7 @@ to resources at the root of the project, setup the base structure, write your pa
 Quick start
 -----------
 1. Install python dependencies.
-    `pip install django-frontend-presets --extra-index-url https://api.packagr.app/xKNhDZcWW/`
+    `pip install django-frontend-presets`
 
 2. Add "django_frontend_presets" to your INSTALLED_APPS setting like this::
 
