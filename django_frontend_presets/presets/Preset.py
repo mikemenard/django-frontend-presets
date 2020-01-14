@@ -42,7 +42,7 @@ class Preset(metaclass=abc.ABCMeta):
             )
 
             file.seek(0)
-            json.dump(packages, file, indent=2)
+            json.dump(packages, file, indent=4)
             file.truncate()
 
         self.delete_paths((
