@@ -9,6 +9,7 @@ class Bootstrap(Preset):
     def install(self):
         super().update_packages()
         self.update_sass()
+        self.update_bootstrapping()
 
     def update_package_list(self, packages):
         packages['bootstrap'] = '^4.0.0'
@@ -29,3 +30,9 @@ class Bootstrap(Preset):
             stubs_path('bootstrap', '_variables.scss'),
             root_path('resources', 'static', 'sass')
         )
+
+    def update_bootstrapping(self):
+        self.delete_paths((
+            root_path('resources', 'static', 'js', 'bootstrap.js'),
+        ))
+        shutil.copy(stubs_path('bootstrap', 'bootstrap.js'), root_path('resources', 'static', 'js'))
